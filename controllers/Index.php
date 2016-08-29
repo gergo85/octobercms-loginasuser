@@ -28,7 +28,7 @@ class Index extends Controller
 
             }
 
-            if ($user) {
+            if ($user && $user->is_activated) {
                 Auth::login($user, true);
             }
         }

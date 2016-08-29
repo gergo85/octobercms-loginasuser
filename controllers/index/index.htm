@@ -1,4 +1,4 @@
-<?php if ($user): ?>
+<?php if ($user && $user->is_activated): ?>
 <p class="text-success" role="alert">
   <?= Lang::get('studiobosco.loginasuser::lang.success', ['username' => $user->username ]) ?>
 </p>
