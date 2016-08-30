@@ -9,7 +9,6 @@ use StudioBosco\LoginAsUser\Classes\UserExtender;
  */
 class Plugin extends PluginBase
 {
-
     public $require = ['RainLab.User'];
 
     /**
@@ -23,7 +22,8 @@ class Plugin extends PluginBase
             'name'        => 'Login As User',
             'description' => 'Logs you in as a certain frontend user.',
             'author'      => 'Studio Bosco',
-            'icon'        => 'icon-user'
+            'icon'        => 'icon-user',
+            'homepage'    => 'https://github.com/studiobosco/octobercms-loginasuser'
         ];
     }
 
@@ -66,9 +66,9 @@ class Plugin extends PluginBase
     {
         return [
             'studiobosco.loginasuser.login' => [
-                'tab' => 'rainlab.user::lang.plugin.tab',
+                'tab'   => 'rainlab.user::lang.plugin.tab',
                 'label' => 'studiobosco.loginasuser::lang.plugin.login',
-            ],
+            ]
         ];
     }
 
@@ -88,8 +88,7 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-leaf',
                 'permissions' => ['studiobosco.loginasuser.*'],
                 'order'       => 500,
-            ],
+            ]
         ];
     }
-
 }
